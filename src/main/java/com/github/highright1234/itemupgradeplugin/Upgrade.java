@@ -26,7 +26,6 @@ public class Upgrade implements Listener{
         System.out.println("3");
         ItemStack result = new ItemStack(Material.DIAMOND_SHOVEL, 1);
         event.setResult(result);
-        inventory.setResult(result);
     }
 
 }
