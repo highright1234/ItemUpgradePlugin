@@ -1,0 +1,4 @@
+name: ItemUpgradePlugin
+version: @version@
+main: com.github.highright1234.itemupgradeplugin.ItemUpgradePlugin
+api-version: 1.16
