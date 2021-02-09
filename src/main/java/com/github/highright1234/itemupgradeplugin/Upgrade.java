@@ -24,7 +24,8 @@ public class Upgrade implements Listener{
             return;
         }
         System.out.println("3");
-        ItemStack result = new ItemStack(Material.DIAMOND_SHOVEL, 1);
+        ItemStack result = tool.clone();
+        result.setType(Material.DIAMOND_SHOVEL);
         event.setResult(result);
     }
 
