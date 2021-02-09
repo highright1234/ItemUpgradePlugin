@@ -7,7 +7,6 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.SmithingInventory;
 
 public class Upgrade implements Listener{
-    /*
     @EventHandler
     public void onPrepareSmithingEvent(PrepareSmithingEvent event){
         SmithingInventory inventory = event.getInventory();
@@ -28,6 +27,6 @@ public class Upgrade implements Listener{
         ItemStack result = new ItemStack(Material.DIAMOND_SHOVEL, 1);
         event.setResult(result);
     }
-     */
+
 
 }
