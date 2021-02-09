@@ -14,7 +14,6 @@ public class Upgrade implements Listener{
         ItemStack tool = inventory.getItem(0);
         ItemStack modifier = inventory.getItem(1);
 
-
         System.out.println("1");
         if(tool ==null|| modifier ==null){
             return;
