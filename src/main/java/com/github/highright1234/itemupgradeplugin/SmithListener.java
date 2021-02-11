@@ -33,12 +33,14 @@ public class SmithListener implements Listener {
             if (meta.getCustomModelData() == 1) {
                 meta.setCustomModelData(2);
                 meta.addAttributeModifier(Attribute.GENERIC_ATTACK_DAMAGE,
-                        new AttributeModifier("generic.attack_damage", 9, AttributeModifier.Operation.ADD_NUMBER));
+                        new AttributeModifier("generic.attack_damage", 13, AttributeModifier.Operation.ADD_NUMBER));
                 result.setItemMeta(meta);
                 event.setResult(result);
             }
         } else {
             meta.setCustomModelData(1);
+            meta.addAttributeModifier(Attribute.GENERIC_ATTACK_DAMAGE,
+                    new AttributeModifier("generic.attack_damage", 11, AttributeModifier.Operation.ADD_NUMBER));
             result.setItemMeta(meta);
             event.setResult(result);
         }
