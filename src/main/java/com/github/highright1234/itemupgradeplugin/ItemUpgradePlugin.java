@@ -28,8 +28,8 @@ public class ItemUpgradePlugin extends JavaPlugin {
     public void getRecipe() {
         SmithingRecipe recipe = new SmithingRecipe(new NamespacedKey(this, "test"),
                 new ItemStack(Material.AIR, 1), // any material seems fine
-                new RecipeChoice.MaterialChoice(Material.DIAMOND_SWORD),
-                new RecipeChoice.MaterialChoice(Material.DIAMOND)
+                new RecipeChoice.MaterialChoice(Material.NETHERITE_SWORD),
+                new RecipeChoice.MaterialChoice(Material.NETHERITE_INGOT)
         );
         Bukkit.addRecipe(recipe);
     }
