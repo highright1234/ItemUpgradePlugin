@@ -10,7 +10,6 @@ import org.bukkit.inventory.EquipmentSlot;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.SmithingInventory;
 import org.bukkit.inventory.meta.ItemMeta;
-
 import java.util.UUID;
 
 
@@ -27,7 +26,13 @@ public class SmithListener implements Listener {
             return;
         }
 
-        if (tool.getType() != Material.NETHERITE_SWORD || modifier.getType() != Material.NETHERITE_INGOT) {
+        if (tool.getType() != Material.NETHERITE_SWORD || modifier.getType() != Material.RABBIT_HIDE) {
+            return;
+        }
+        if (!modifier.getItemMeta().hasCustomModelData()) {
+            return;
+        }
+        if (modifier.getItemMeta().getCustomModelData() != 100) {
             return;
         }
         ItemStack result = tool.clone();
