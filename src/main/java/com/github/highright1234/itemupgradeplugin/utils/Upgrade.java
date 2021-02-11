@@ -12,7 +12,6 @@ public class Upgrade {
     public Upgrade(SmithingInventory inventory, ItemStack getTool, ItemStack getModifier, Material getDefault, Material getSource, Material getChanged) {
         ItemMeta meta = getTool.getItemMeta();
         meta.getCustomModelData();
-        meta.getEnchants();
 
         if(getTool == null|| getModifier == null){
             return;
