@@ -6,9 +6,12 @@ import org.bukkit.attribute.AttributeModifier;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.PrepareSmithingEvent;
+import org.bukkit.inventory.EquipmentSlot;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.SmithingInventory;
 import org.bukkit.inventory.meta.ItemMeta;
+
+import java.util.UUID;
 
 
 public class SmithListener implements Listener {
@@ -32,15 +35,23 @@ public class SmithListener implements Listener {
         if (meta.hasCustomModelData()) {
             if (meta.getCustomModelData() == 1) {
                 meta.setCustomModelData(2);
-                meta.addAttributeModifier(Attribute.GENERIC_ATTACK_DAMAGE,
-                        new AttributeModifier("generic.attack_damage", 13, AttributeModifier.Operation.ADD_NUMBER));
+                AttributeModifier attribute = new AttributeModifier(UUID.randomUUID(),
+                        "generic.attack_damage",
+                        12, AttributeModifier.Operation.ADD_NUMBER,
+                        EquipmentSlot.HAND);
+                meta.removeAttributeModifier(Attribute.GENERIC_ATTACK_DAMAGE);
+                meta.addAttributeModifier(Attribute.GENERIC_ATTACK_DAMAGE, attribute);
                 result.setItemMeta(meta);
                 event.setResult(result);
             }
         } else {
             meta.setCustomModelData(1);
-            meta.addAttributeModifier(Attribute.GENERIC_ATTACK_DAMAGE,
-                    new AttributeModifier("generic.attack_damage", 11, AttributeModifier.Operation.ADD_NUMBER));
+            AttributeModifier attribute = new AttributeModifier(UUID.randomUUID(),
+                    "generic.attack_damage",
+                    10, AttributeModifier.Operation.ADD_NUMBER,
+                    EquipmentSlot.HAND);
+            meta.removeAttributeModifier(Attribute.GENERIC_ATTACK_DAMAGE);
+            meta.addAttributeModifier(Attribute.GENERIC_ATTACK_DAMAGE, attribute);
             result.setItemMeta(meta);
             event.setResult(result);
         }
