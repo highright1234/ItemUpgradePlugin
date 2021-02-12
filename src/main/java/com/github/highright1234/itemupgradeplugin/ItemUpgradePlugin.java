@@ -17,6 +17,7 @@ public class ItemUpgradePlugin extends JavaPlugin {
     @Override
     public void onEnable() {
         Bukkit.getPluginManager().registerEvents(new SmithListener(), this);
+        Bukkit.getPluginManager().registerEvents(new Random_System(), this);
         getRecipe();
 
         // Plugin startup logic
