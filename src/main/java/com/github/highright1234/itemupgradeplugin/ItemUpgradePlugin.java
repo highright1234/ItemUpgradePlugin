@@ -47,7 +47,7 @@ public class ItemUpgradePlugin extends JavaPlugin {
         attack_magwang_recipe.shape("*%*","%&%","*%*");
         attack_magwang_recipe.setIngredient('*', Material.WITHER_SKELETON_SKULL);
         attack_magwang_recipe.setIngredient('%', Material.BLAZE_ROD);
-        attack_magwang_recipe.setIngredient('&', magwang);
+        attack_magwang_recipe.setIngredient('&', Material.BLAZE_ROD);
         Bukkit.addRecipe(attack_magwang_recipe);
     }
 }
