@@ -8,6 +8,9 @@ import org.bukkit.inventory.RecipeChoice;
 import org.bukkit.inventory.ShapedRecipe;
 import org.bukkit.inventory.SmithingRecipe;
 import org.bukkit.plugin.java.JavaPlugin;
+
+import java.util.Objects;
+
 import static com.github.highright1234.itemupgradeplugin.Items_ItemStack.*;
 
 
@@ -18,6 +21,7 @@ public class ItemUpgradePlugin extends JavaPlugin {
     public void onEnable() {
         Bukkit.getPluginManager().registerEvents(new SmithListener(), this);
         Bukkit.getPluginManager().registerEvents(new Random_System(), this);
+        Objects.requireNonNull(getCommand("upgradeplugin")).setExecutor(new Command());
         getRecipe();
 
         // Plugin startup logic

@@ -2,3 +2,7 @@ name: ItemUpgradePlugin
 version: @version@
 main: com.github.highright1234.itemupgradeplugin.ItemUpgradePlugin
 api-version: 1.16
+commands:
+  upgradeplugin:
+    description: 아이템강화 플러그인 명령어
+    usage: /upgradeplugin help
