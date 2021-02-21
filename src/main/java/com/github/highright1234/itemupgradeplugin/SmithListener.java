@@ -50,15 +50,17 @@ public class SmithListener implements Listener {
                 event.setResult(result);
             }
         } else {
-            meta.setCustomModelData(1);
-            AttributeModifier attribute = new AttributeModifier(UUID.randomUUID(),
-                    "generic.attack_damage",
-                    10, AttributeModifier.Operation.ADD_NUMBER,
-                    EquipmentSlot.HAND);
-            meta.removeAttributeModifier(Attribute.GENERIC_ATTACK_DAMAGE);
-            meta.addAttributeModifier(Attribute.GENERIC_ATTACK_DAMAGE, attribute);
-            result.setItemMeta(meta);
-            event.setResult(result);
+            ItemStack returnitem = new Items_ItemStack().RandomItemUpgradeBefore(10,10,"asdf", 1);
+            event.setResult(returnitem);
+//            meta.setCustomModelData(1);
+//            AttributeModifier attribute = new AttributeModifier(UUID.randomUUID(),
+//                    "generic.attack_damage",
+//                    10, AttributeModifier.Operation.ADD_NUMBER,
+//                    EquipmentSlot.HAND);
+//            meta.removeAttributeModifier(Attribute.GENERIC_ATTACK_DAMAGE);
+//            meta.addAttributeModifier(Attribute.GENERIC_ATTACK_DAMAGE, attribute);
+//            result.setItemMeta(meta);
+//            event.setResult(result);
         }
     }
 }

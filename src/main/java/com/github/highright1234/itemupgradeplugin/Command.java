@@ -13,9 +13,9 @@ public class Command implements CommandExecutor {
     public boolean onCommand(CommandSender sender, org.bukkit.command.Command command, String label, String[] args) {
         if (sender instanceof Player) {
             if (args.length == 1) {
-                if (args[0] == "attack_magwang") {
+                if (args[0].equals("attack_magwang")) {
 
-                } else if (args[0] == "magwang") {
+                } else if (args[0].equals("magwang")) {
 
                 }
             }
