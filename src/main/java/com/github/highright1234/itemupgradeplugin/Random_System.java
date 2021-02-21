@@ -2,6 +2,7 @@ package com.github.highright1234.itemupgradeplugin;
 
 import org.bukkit.Material;
 import org.bukkit.Sound;
+import org.bukkit.attribute.Attribute;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -21,7 +22,12 @@ public class Random_System implements Listener {
                 ItemStack item1 = event.getInventory().getItem(0);
                 if (item1 != null) {
                     if (item1.getItemMeta() != null) {
-                        event.setCurrentItem(new Items_ItemStack().AttackMagwangItemPatch(item1, 10, 12));
+                        event.setCurrentItem(new Items_ItemStack().
+                                MagwangItemPatch(item1,
+                                        10,
+                                        "generic.attack_damage",
+                                        12,
+                                        Attribute.GENERIC_ATTACK_DAMAGE));
                     }
                 }
             }

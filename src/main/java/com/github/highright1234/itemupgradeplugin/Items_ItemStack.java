@@ -40,15 +40,15 @@ public class Items_ItemStack {
         return returnItem;
     }
 
-    public ItemStack AttackMagwangItemPatch(ItemStack item, int customModelData, int attack_damage) {
+    public ItemStack MagwangItemPatch(ItemStack item, int customModelData, String type,int value, Attribute attribute_) {
         ItemMeta meta = item.getItemMeta();
         meta.setCustomModelData(customModelData);
         AttributeModifier attribute = new AttributeModifier(UUID.randomUUID(),
-                "generic.attack_damage",
-                attack_damage, AttributeModifier.Operation.ADD_NUMBER,
+                type,
+                value, AttributeModifier.Operation.ADD_NUMBER,
                 EquipmentSlot.HAND);
-        meta.removeAttributeModifier(Attribute.GENERIC_ATTACK_DAMAGE);
-        meta.addAttributeModifier(Attribute.GENERIC_ATTACK_DAMAGE, attribute);
+        meta.removeAttributeModifier(attribute_);
+        meta.addAttributeModifier(attribute_, attribute);
         item.setItemMeta(meta);
         return item;
     }
