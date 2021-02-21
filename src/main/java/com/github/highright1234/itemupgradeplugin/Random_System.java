@@ -24,7 +24,7 @@ public class Random_System implements Listener {
                     if (item1.getItemMeta() != null) {
                         event.setCurrentItem(new Items_ItemStack().
                                 MagwangItemPatch(item1,
-                                        10,
+                                        1,
                                         "generic.attack_damage",
                                         12,
                                         Attribute.GENERIC_ATTACK_DAMAGE));
